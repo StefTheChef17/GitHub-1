@@ -10,5 +10,5 @@ def index():
   return "Zdravo programeri"
 
 
-if ___name__=='__main__':
-  app.run()
+ if ___name__=='__main__':
+   app.run()
