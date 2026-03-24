@@ -1,7 +1,7 @@
 import os
 import sqlite3
 from flask import flask, reguest, jsonify, json
-from flask-cors import CORS
+from flask_cors import CORS
 
 app = Flask(_name_)
 
