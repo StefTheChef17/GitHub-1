@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
    return render_template("index.html",
                 naslov="Predmeti",
-                spisak=["Matematika", "Srpski jezik", "Informatika", "Fizika"]))
+                spisak=["Matematika", "Srpski jezik", "Informatika", "Fizika"])
 
 
 @app.route("/primer-string")
