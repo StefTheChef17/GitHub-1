@@ -9,9 +9,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+   naslovSpiska = "Predmeti"
+   spisakPredmeta = ["Matematika", "Srpski jezik", "Informatika", "Fizika"]
    return render_template("index.html",
                 naslov="Predmeti",
-                spisak=["Matematika", "Srpski jezik", "Informatika", "Fizika"])
+                spisak=spisakPredmeta)
 
 
 @app.route("/primer-string")
