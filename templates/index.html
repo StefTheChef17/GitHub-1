@@ -11,7 +11,13 @@
 <body>
    <h1>Zdravo programeri</h1>
    <h1>Pozdrav sa templejta</h1>
-   <h3>Predmeti u skoli</h3>
+   <h3>{{ naslov }}</h3>
+   <p>{{ spisak }}</p>
+   <ul>
+        {% for stavka in spisak %}
+          <li>{{ stavka }}</li>
+        {% endfor %}
+      </ul>
 </body>
 </html>
 <!DOCTYPE html>
