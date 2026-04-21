@@ -9,12 +9,18 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-   naslovSpiska = "Predmeti"
-   spisakPredmeta = ["Matematika", "Srpski jezik", "Informatika", "Fizika"]
+   nazivSpiska = "Spisak restorana"
+   spisakPredmeta = ["Pastica", "Pica Tim", "HasHub", "Sahara"]
    return render_template("index.html",
-                naslov="Predmeti",
-                spisak=spisakPredmeta)
-
+                naziv=nazivSpiska,
+                spisak=spisakRestorana)
+@app.route("/restoran")
+def index():
+   nazivRestorana = "ABC"
+   spisakJela =["Pljeskavica od 5", "Pljeskavica od 10", "Sendvic kulen", "Pica Margarita"]
+   return render_template("restoran.html",
+                naziv=nazivRestorana,
+                spisak=spisakJela)
 
 @app.route("/primer-string")
 def string():
