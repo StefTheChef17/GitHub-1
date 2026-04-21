@@ -8,24 +8,14 @@
    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-   <h1>Zdravo programeri</h1>
-   <h1>Pozdrav sa templejta</h1>
-   <h3>{{ naslov }}</h3>
+   <h1>Meni</h1>
+   <h1>Restoran</h1>
+   <h3>{{ naziv }}</h3>
    <p>{{ spisak }}</p>
    <ul>
         {% for stavka in spisak %}
           <li><a href="/restoran">{{ stavka }}</a>/li>
         {% endfor %}
       </ul>
-</div>
-</main>
-<footer>
-  <div class="container sredina">
-    <h4>Brzi doo, Leskovac</h4>
-    <h4>Proleterska 34</h4>
-    <h4>055 256 256</h4>
-   </div>
-  
- </footer>
 </body>
 </html>
