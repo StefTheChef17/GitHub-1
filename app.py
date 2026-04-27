@@ -3,9 +3,7 @@ import sqlite3
 from flask import Flask, request, jsonify, json, render_template
 from flask_cors import CORS
 
-
 app = Flask(__name__)
-
 
 @app.route("/")
 def index():
@@ -15,22 +13,22 @@ def index():
                 naziv=nazivSpiska,
                 spisak=spisakRestorana)
 @app.route("/restoran")
-def index():
+def restoran():
    nazivRestorana = "ABC"
    spisakJela =["Pljeskavica od 5", "Pljeskavica od 10", "Sendvic kulen", "Pica Margarita"]
    return render_template("restoran.html",
                 naziv=nazivRestorana,
                 spisak=spisakJela)
+   if __name__=='__main':
+      app.run()
 
 @app.route("/primer-string")
 def string():
    return "Neki ne preterano dugacak tekst"
 
-
 @app.route("/primer-broj")
 def broj():
    return 265
-
 
 @app.route("/primer-niz")
 def niz():
@@ -45,7 +43,6 @@ def primerJson():
        "status": "success"
    }
    return (data)
-
 
 @app.route("/primer-html")
 def primerHTML():
@@ -63,7 +60,5 @@ def primerHTML():
 </body>
 </html>"""
    return data
-
-
 if __name__ == '__main__':
    app.run()  
