@@ -8,7 +8,12 @@ app = Flask(__name__)
 @app.route("/")
 def index():
    nazivSpiska = "Spisak restorana"
-   spisakRestorana = ["Pastica", "Pica Tim", "HasHub", "Sahara"]
+   #spisakRestorana = ["Pastica", "Pica Tim", "HasHub", "Sahara"]
+   con = sqlite3.connect('dostavahrane.db')
+
+   cur = con.cursor()
+   cur.execute("SELECT naziv FROM restoran")
+   Spisak restorana = cur.fetchall()
    return render_template("index.html",
                 naziv=nazivSpiska,
                 spisak=spisakRestorana)
