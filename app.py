@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
    nazivSpiska = "Spisak restorana"
-   spisakPredmeta = ["Pastica", "Pica Tim", "HasHub", "Sahara"]
+   spisakRestorana = ["Pastica", "Pica Tim", "HasHub", "Sahara"]
    return render_template("index.html",
                 naziv=nazivSpiska,
                 spisak=spisakRestorana)
