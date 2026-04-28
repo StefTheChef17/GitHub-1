@@ -13,7 +13,7 @@ def index():
 
    cur = con.cursor()
    cur.execute("SELECT naziv FROM restoran")
-   Spisak restorana = cur.fetchall()
+   spisakRestorana = cur.fetchall()
    return render_template("index.html",
                 naziv=nazivSpiska,
                 spisak=spisakRestorana)
