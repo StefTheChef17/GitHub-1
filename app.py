@@ -19,8 +19,14 @@ def index():
                 spisak=spisakRestorana)
 @app.route("/restoran"/<id_rest>)
 def restoran(id_rest):
-   nazivRestorana = "ABC"
-   spisakJela =["Pljeskavica od 5", "Pljeskavica od 10", "Sendvic kulen", "Pica Margarita"]
+   nazivRestorana = "Restoran"
+  # spisakJela =["Pljeskavica od 5", "Pljeskavica od 10", "Sendvic kulen", "Pica Margarita"]
+   con = sqlite3.connect('dostavahrane.db')
+
+   cur = con.cursor()
+   query= f"SELECT naziv FROM meni where id_restorana=={id_rest}"
+   cur.execute(query)
+   spisakJela = cur.fetchall()
    return render_template("restoran.html",
                 naziv=nazivRestorana,
                 spisak=spisakJela)
