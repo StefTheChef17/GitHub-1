@@ -17,7 +17,7 @@ def index():
    return render_template("index.html",
                 naziv=nazivSpiska,
                 spisak=spisakRestorana)
-@app.route("/restoran"/<id_rest>)
+@app.route("/restoran/<id_rest>")
 def restoran(id_rest):
    nazivRestorana = "Restoran"
   # spisakJela =["Pljeskavica od 5", "Pljeskavica od 10", "Sendvic kulen", "Pica Margarita"]
