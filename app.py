@@ -12,7 +12,7 @@ def index():
    con = sqlite3.connect('dostavahrane.db')
 
    cur = con.cursor()
-   cur.execute("SELECT naziv FROM restoran")
+   cur.execute("SELECT id, naziv FROM restoran")
    spisakRestorana = cur.fetchall()
    return render_template("index.html",
                 naziv=nazivSpiska,
