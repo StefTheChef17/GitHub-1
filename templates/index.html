@@ -15,7 +15,7 @@
    <p>{{ spisak }}</p>
    <ul>
         {% for stavka in spisak %}
-          <li><a href="/restoran">{{ stavka }}</a></li>
+          <li><a href="/restoran/{{stavka.id}}">{{ stavka.naziv }}</a></li>
         {% endfor %}
       </ul>
 </body>
