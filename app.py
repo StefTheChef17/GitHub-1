@@ -24,7 +24,7 @@ def restoran(id_rest):
    con = sqlite3.connect('dostavahrane.db')
 
    cur = con.cursor()
-   query= f"SELECT naziv FROM meni where id_restorana=={id_rest}"
+   query= f"SELECT id, naziv FROM meni where id_restorana=={id_rest}"
    cur.execute(query)
    spisakJela = cur.fetchall()
    return render_template("restoran.html",
