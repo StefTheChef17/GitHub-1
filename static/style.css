@@ -10,3 +10,6 @@ body{
   font-family:'Gill Sans', 'Gill Sans MT'
   font-size: 24px;
 }
+header>img{
+  height:100px;
+}
